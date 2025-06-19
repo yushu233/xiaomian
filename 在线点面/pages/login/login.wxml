@@ -1,0 +1,32 @@
+<!--client/pages/login.wxml-->
+<!--启动界面-->
+<view class='container'>
+  <!-- 加载开始 -->
+  <view class='loading-box' wx:if="{{}}">
+    <image class='loading-img' src='../img/loading.gif'></image>
+  </view>
+  <!-- 加载结束 -->
+  <block wx:else>
+    <image class='show-img' src='../img/logo.png'></image>
+    <!-- 头像及动画 -->
+    <view class='content'>
+      <!-- 有网 已验证 -->
+      <view wx:if="{{(hasUserInfo || !canIUse)}}">
+        <image class='avatar' src="../img/uservatar.png" mode="cover"></image>
+      </view>
+      <view wx:else>
+        <image class='avatar' src='../img/unloading.png'></image>
+      </view>
+      <!-- 上方按钮：跳转到菜单页面 -->
+      <button class='click-btn' type='primary' bindtap='goMenuPage'>
+        立即点餐
+      </button>
+      <!-- 下方按钮：跳转到订单页面 -->
+      <button class='click-btn' type='default' bindtap='goOrderPage' style="position: relative; left: 0rpx; top: 20rpx">
+        查看我的订单
+      </button>
+            <view class="admim-text" bindtap="openadmin" wx:if="{{isAdmin}}" style="position: relative; left: 0rpx; top: 24rpx">进入管理员模式</view>
+      <text class='copyright'>@爱上小面！</text>
+    </view>
+  </block>
+</view>

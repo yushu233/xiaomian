@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/menu/menu",
+    "pages/order/order",
+    "pages/usermenu/usermenu",
+    "pages/severaddfood/severaddfood",
+    "pages/severadmin/severadmin",
+    "pages/severmenu/severmenu",
+    "pages/severalertfood/severalertfood",
+    "pages/info/info",
+    "pages/severinfo/severinfo",
+    "pages/pay/pay"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "爱上小面",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

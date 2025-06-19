@@ -1,0 +1,7 @@
+<!--pages/index/index.wxml-->
+<view class="content1">
+  <image class='shows-img' src='../img/logo.png'></image>
+  <text class="title">吃了小面</text>
+  <text class="title">爱上小面</text>
+  <button class='click-btn' type='primary' open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">微信登录</button>
+</view>

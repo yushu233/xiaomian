@@ -1,0 +1,32 @@
+<!--client/pages/pay/pay.wxml-->
+<view class='page-head-box'>
+  <image class='head-img' src='../img/logo.png'></image>
+  <view class='wel-title'>吃了小面,爱上小面！</view>
+</view>
+<view class='contioner'>
+<view class='page-info-down'>请确认您的菜单：</view>
+</view>
+<view style='background-color:#f6f6f6;width:100;height:20rpx;'></view>
+<view class='contioner'>
+  <view class='menu-box'>
+    <view class='list-box' wx:for="{{myfoodsList}}" wx:key="{{item.gid}}">
+      <view class='list-item-box'>
+         <image class='item-img' src="{{serveraddr}}/images/{{item.gimg}}" data-gid="{{item.gid}}" bindtap='goinfo'></image>
+        <view class='item-info-box'>
+          <view class='item-name'>{{item.gname}}\n\n</view>
+          <text class='item-type'>\n*{{item.gcount}}份</text>
+        </view>
+        <view class='item-price'>{{item.gprice*item.gcount}}元
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='page-bottom'>
+  <view class='container-bottom-box'>
+    <view class='container-bottom-l'>总计：
+      <text class='myfont2'>{{sumprice}}</text>
+    </view>
+    <view class='container-bottom-r' bindtap='gopay'>去结账</view>
+  </view>
+</view>
